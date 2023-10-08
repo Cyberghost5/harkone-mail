@@ -16,6 +16,7 @@ if (isset($_POST['send'])) {
   $TagifyUserList = $_POST['TagifyUserList'];
   $subject = $_POST['subject'];
   $real_message = $_POST['message'];
+  $date = date('d/m/Y H:i');
 
   $sep = '"';
 
@@ -66,6 +67,8 @@ if (isset($_POST['send'])) {
       // var_dump($resultstr);
 
       $re = json_decode($TagifyUserList);
+      $t = count($re->data);
+      echo 'Please wait, you will be redirected back to the email page in a few seconds. Do not refresh!';
       foreach ($re->data as $res) {
         try {
           $mail->addAddress($res->email, $res->name);
@@ -92,9 +95,9 @@ if (isset($_POST['send'])) {
 
       //$mail->send();
 
-      // $stmt = $conn->prepare("INSERT INTO transaction_bulkemail (trxid, userid, amount, total_no, subject, message, from_sender, from_email, to_receipent, datetime, status) VALUES (:trxid, :userid, :amount, :total_no, :subject, :message, :sender_name, :sender_email, :receipient, :datetime, :status)");
-      // $stmt->execute(['trxid'=>$trx_ref, 'userid'=>$user['id'], 'amount'=>$amount, 'total_no'=>$t, 'subject'=>$subject, 'message'=>$real_message, 'sender_name'=>$sender_name, 'sender_email'=>$sender_email, 'receipient'=>$receipient, 'datetime'=>$date, 'status'=>1]);
-
+      $stmt = $conn->prepare("INSERT INTO emails (userid, total_no, subject, message, from_sender, from_email, to_receipent, datetime) VALUES (:userid, :total_no, :subject, :message, :sender_name, :sender_email, :receipient, :datetime)");
+      $stmt->execute(['userid'=>$admin['id'], 'total_no'=>$t, 'subject'=>$subject, 'message'=>$real_message, 'sender_name'=>$sender_name, 'sender_email'=>$sender_email, 'receipient'=>$TagifyUserList, 'datetime'=>$date]);
+      echo 'Please wait, you will be redirected back to the email page in a few seconds. Do not refresh!';
     }
     catch (Exception $e) {
       $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;

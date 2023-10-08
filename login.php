@@ -97,14 +97,14 @@ $pdo->close();
                 if(isset($_SESSION['username'])){
                   echo "
                     <div class='form-group'>
-                      <input type='text' value='".$_SESSION['username']."' class='form-control form-control-lg' name='username' id='exampleInputUsername1' placeholder='Username' required>
+                      <input type='text' value='".$_SESSION['username']."' class='form-control form-control-lg' name='username' id='exampleInputUsername1' placeholder='Username/Email' required>
                     </div>
                   ";
                   unset($_SESSION['username']);
                 }else {
                   echo "
                     <div class='form-group'>
-                      <input type='text' class='form-control form-control-lg' name='username' id='exampleInputUsername1' placeholder='Username' required>
+                      <input type='text' class='form-control form-control-lg' name='username' id='exampleInputUsername1' placeholder='Username/Email' required>
                     </div>
                   ";
                 }

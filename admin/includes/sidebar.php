@@ -43,6 +43,13 @@
     </li>
 
     <li class="nav-item">
+      <a class="nav-link" href="sent-mails">
+        <i class="mdi mdi-send menu-icon"></i>
+        <span class="menu-title">Sent Email</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
       <a class="nav-link" href="#profile" data-toggle="modal">
         <i class="mdi mdi-account menu-icon"></i>
         <span class="menu-title">Account</span>
@@ -77,7 +84,7 @@
         <ul class="nav flex-column sub-menu">
           <li class="nav-item"><a class="nav-link" href="gen-settings">General Settings</a></li>
           <!--<li class="nav-item"><a class="nav-link" href="system-settings">System Settings</a></li>-->
-          <li class="nav-item"><a class="nav-link" href="email-settings">Email Settings</a></li>
+          <li class="nav-item"><a class="nav-link" href="omail-settings">Email Settings</a></li>
         </ul>
       </div>
     </li>

@@ -93,15 +93,19 @@ include 'include/session.php'; ?>
                 <div class="col-md-6 mb-4 stretch-card transparent">
                   <div class="card card-dark-blue">
                     <div class="card-body">
-                      <p class="card-title text-white">API Balance</p>
+                      <p class="card-title text-white">Sent Emails</p>
                       <div class="row">
                         <div class="col-8 text-white">
                           <?php
-                          echo "<h3>" . $settings['currency'] . number_format(334334) . "</h3>";
+                          $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM emails");
+                          $stmt->execute();
+                          $emrow =  $stmt->fetch();
+
+                          echo "<h3>" . number_format($emrow['numrows']) . "</h3>";
                           ?>
                         </div>
                         <div class="col-4">
-                          <i class="icon-lg mdi mdi-wallet"></i>
+                          <i class="icon-lg mdi mdi-email"></i>
                         </div>
                       </div>
                     </div>

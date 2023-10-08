@@ -153,6 +153,6 @@ require '../vendor/phpmailer/src/SMTP.php';
 		$pdo->close();
 	}
 
-	echo "<script>window.location.assign('email-settings')</script>";
+	echo "<script>window.location.assign('omail-settings')</script>";
 
 ?>

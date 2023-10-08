@@ -6,6 +6,13 @@
 <link rel="stylesheet" href="<?php echo $settings['site_url']; ?>vendors/quill/quill.snow.css">
 <link rel="stylesheet" href="<?php echo $settings['site_url']; ?>vendors/simplemde/simplemde.min.css">
 <body>
+  <?php
+  // if(isset($_POST['resend_email'])){echo $_POST['from_sender'];}else{echo $settings['site_name'];} // From name
+  // if(isset($_POST['resend_email'])){echo $_POST['from_email'];}else{echo $settings['admin_email'];} // From email
+  // if(isset($_POST['resend_email'])){echo $_POST['subject'];}else{echo '';} // Subject
+  // if(isset($_POST['resend_email'])){echo $_POST['receipent'];}else{echo '';} // Receipent
+  // if(isset($_POST['resend_email'])){echo $_POST['message'];}else{echo $settings['email_sample'];} // Message
+  ?>
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
     <?php include 'includes/navbar.php'; ?>
@@ -68,31 +75,34 @@
               <div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Email</h4>
+                  <?php
+                  //var_dump($_POST);
+                  ?>
                   <form class="form" action="email-action" method="POST">
                     <h3>Send email to users</h3>
                     <div class="form-group">
                       <label>From [Sender Name]</label>
-                      <input type="text" name="sender_name" class="form-control" value="<?php echo $settings['site_name']; ?>" placeholder="Enter Sender Name" required>
+                      <input type="text" name="sender_name" class="form-control" value="<?php if(isset($_POST['resend_email'])){echo $_POST['from_sender'];}else{echo $settings['site_name'];}; ?>" placeholder="Enter Sender Name" required>
                     </div>
                     <div class="form-group">
                       <label>From Email [Sender Email]</label>
-                      <input type="email" name="sender_email" class="form-control" placeholder="Enter Sender Email" value="<?php echo $settings['admin_email']; ?>" required>
+                      <input type="email" name="sender_email" class="form-control" placeholder="Enter Sender Email" value="<?php if(isset($_POST['resend_email'])){echo $_POST['from_email'];}else{echo $settings['admin_email'];}; ?>" required>
                       <small>This would also be the email they can reply to.</small>
                     </div>
                     <div class="form-group">
                       <label>To [Recipients]:</label>
                       <!--<input name="receipient" data-role="tagsinput" class="form-control" placeholder="Enter the receipient Email" required>-->
                       <small class="form-text text-muted">This list only contains users who are active and not blocked or not verified.</small>
-                      <input id="TagifyUserList" name="TagifyUserList" placeholder="Select users"/>
+                      <input id="TagifyUserList" name="TagifyUserList" placeholder="Select users" value="<?php if(isset($_POST['resend_email'])){echo $_POST['receipent'];}else{echo '';}; ?>" />
                       <small class="form-text text-muted">Type or Paste up to 10,000 emails here (xx@gmail.com, xx@domainname.com etc) separate with comma, NO SPACES!</small>
                     </div>
                     <div class="form-group">
                       <label>Subject</label>
-                      <input type="text" name="subject" class="form-control" placeholder="Enter Subject of Email" required>
+                      <input type="text" name="subject" class="form-control" placeholder="Enter Subject of Email" value='<?php if(isset($_POST['resend_email'])){echo $_POST['subject'];}else{echo '';}; ?>' required>
                     </div>
                     <div class="form-group">
                       <label>Message</label>
-                      <textarea name="message" id='tinyMceExample' class="form-control" style="height: 700px" placeholder="Enter Message"><?php echo $settings['email_sample']; ?></textarea>
+                      <textarea name="message" id='tinyMceExample' class="form-control" style="height: 700px" placeholder="Enter Message"><?php if(isset($_POST['resend_email'])){echo $_POST['message'];}else{echo $settings['email_sample'];}; ?></textarea>
                     </div>
 
                     <button type="submit" name="send" class="btn btn-primary btn-rounded btn-icon-text mb-4 mt-4">

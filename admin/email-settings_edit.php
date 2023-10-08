@@ -32,6 +32,6 @@
 		$_SESSION['error'] = 'Fill up settings form first';
 	}
 
-	header('location: email-settings');
+	header('location: omail-settings');
 
 ?>

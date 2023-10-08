@@ -42,8 +42,8 @@ $pdo->close();
 
 		try{
 
-			$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users WHERE username = :username");
-			$stmt->execute(['username'=>$username]);
+			$stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users WHERE username = :username OR email = :email AND type = 1");
+			$stmt->execute(['username'=>$username, 'email'=>$username]);
 			$row = $stmt->fetch();
 			
 			$stmt = $conn->prepare("SELECT * FROM users WHERE id = :reffered_by");
@@ -51,45 +51,25 @@ $pdo->close();
 			$reffered_by = $stmt->fetch();
 
 			if($row['numrows'] > 0){
-				if($row['status'] == 1){
-					if(password_verify($password, $row['password'])){
-						if($row['type']){
+				if($row['type']){
+					if($row['status'] == 1){
+						if(password_verify($password, $row['password'])){
 							$_SESSION['admin'] = $row['id'];
 							setcookie("username", $row['username'], time() + (86400 * 30), "/");
 							setrawcookie("password", $row['password'], time() + (86400 * 30), "/");
-							$stmt = $conn->prepare("INSERT INTO userslog (userid, userip, deviceinfo) VALUES (:userid, :userip, :deviceinfo)");
-							$stmt->execute(['userid'=>$row['id'], 'userip'=>$ip_address, 'deviceinfo'=>$deviceinfo]);
 						}
 						else{
-						    unset($_SESSION['username']);
-							$_SESSION['user'] = $row['id'];
-							setcookie("username", $row['username'], time() + (86400 * 30), "/");
-							setrawcookie("password", $row['password'], time() + (86400 * 30), "/");
-							$_SESSION['message'] = $settings['gen_notification'];
-							$stmt = $conn->prepare("INSERT INTO userslog (userid, userip, deviceinfo) VALUES (:userid, :userip, :deviceinfo)");
-							$stmt->execute(['userid'=>$row['id'], 'userip'=>$ip_address, 'deviceinfo'=>$deviceinfo]);
-							if($row['depo'] == 0){
-							// Add the ref code here
-							$stmt = $conn->prepare("UPDATE users SET referrals=:current_ref, refbal=:refbal WHERE username=:ref_username");
-							$stmt->execute(['current_ref'=>$reffered_by['referrals']+1, 'refbal'=>$reffered_by['refbal']+$settings['ref_bonus'], 'ref_username'=>$reffered_by['username']]);
-							
-							$stmt = $conn->prepare("UPDATE users SET depo=:depo WHERE username=:username");
-							$stmt->execute(['depo'=>2, 'username'=>$row['username']]);
-							}
+							$_SESSION['error'] = 'Incorrect Password';
+							$_SESSION['username'] = $username;
 						}
 					}
 					else{
-						$_SESSION['error'] = 'Incorrect Password';
+						$_SESSION['error'] = 'Account not activated.';
 						$_SESSION['username'] = $username;
 					}
 				}
-				elseif ($row['status'] == 2) {
-					$_SESSION['block'] = 'This account has been blocked for violating our <a href="terms-conditions">Terms & Conditions</a> and cannot be used anymore! If you think otherwise
-					do <a href="contact">write</a> to us providing your username and we could help resolve this.';
-					$_SESSION['username'] = $username;
-				}
 				else{
-					$_SESSION['error'] = 'Account not activated. Check your email for activation link.';
+					$_SESSION['error'] = 'You are not an admin!';
 					$_SESSION['username'] = $username;
 				}
 			}
