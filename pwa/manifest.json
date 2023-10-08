@@ -1,0 +1,29 @@
+  {
+      "name": "MinatPay",
+      "lang": "en-us",
+      "short_name": "Minatpay",
+      "description": "Get the Cheapest airtime and data, Convert your airtime to cash, Pay Utility bills such as electricity, TV subscriptions, internet data bundles and more directly from MinatPay",
+      "start_url": "https://minatpay.com/",
+      "scope": "https://minatpay.com/",
+      "display": "standalone",
+      "theme_color": "#ea672b",
+      "background_color": "#ea672b",
+      "orientation": "any",
+      "icons": [
+          {
+              "src": "https://minatpay.com/assets/images/favicon.png",
+              "type": "image/png",
+              "sizes": "500x500"
+          },
+          {
+              "src": "https://minatpay.com/assets/images/logo.png",
+              "type": "image/png",
+              "sizes": "500x500"
+          },
+          {
+              "src": "https://minatpay.com/assets/images/line-logo.png",
+              "type": "image/png",
+              "sizes": "500x150"
+          }
+      ]
+  }

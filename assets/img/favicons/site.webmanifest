@@ -1,0 +1,29 @@
+  {
+      "name": "BetaLink",
+      "lang": "en-us",
+      "short_name": "BetaLink",
+      "description": "A technology platform that offers solutions to digital needs at best possible price without compromising quality. data, airtime, electricity, cable, airtime to cash, all available for you.",
+      "start_url": "https://betalink.harkone.com.ng/",
+      "scope": "https://betalink.harkone.com.ng/",
+      "display": "standalone",
+      "theme_color": "#ff0000",
+      "background_color": "#ff0000",
+      "orientation": "any",
+      "icons": [
+          {
+              "src": "https://betalink.harkone.com.ng/assets/images/favicon.png",
+              "type": "image/png",
+              "sizes": "500x500"
+          },
+          {
+              "src": "https://betalink.harkone.com.ng/assets/images/logo.png",
+              "type": "image/png",
+              "sizes": "500x500"
+          },
+          {
+              "src": "https://betalink.harkone.com.ng/assets/images/line-logo.png",
+              "type": "image/png",
+              "sizes": "500x150"
+          }
+      ]
+  }

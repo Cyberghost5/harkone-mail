@@ -1,0 +1,89 @@
+[31-Aug-2023 13:09:24 UTC] PHP Parse error:  syntax error, unexpected 'easyaccess' (T_STRING) in /home5/smdvtuco/public_html/user/apis/easyaccess-data-card.php on line 3
+[31-Aug-2023 13:09:25 UTC] PHP Parse error:  syntax error, unexpected 'easyaccess' (T_STRING) in /home5/smdvtuco/public_html/user/apis/easyaccess-data-card.php on line 3
+[07-Sep-2023 17:06:15 UTC] PHP Fatal error:  Call to a member function open() on null in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 2
+[07-Sep-2023 17:06:54 UTC] PHP Fatal error:  Call to a member function open() on null in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 2
+[07-Sep-2023 17:12:51 UTC] PHP Fatal error:  Cannot redeclare class Database in /home5/smdvtuco/public_html/user/apis/include/conn1.php on line 3
+[07-Sep-2023 17:35:30 UTC] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 46
+[07-Sep-2023 20:31:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:32:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:32:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:34:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:37:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'password' cannot be null' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:37:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'password' cannot be null' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 20:39:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'lastname' cannot be null' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:93
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(93): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 93
+[07-Sep-2023 21:32:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'pin' cannot be null' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:92
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(92): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 92
+[07-Sep-2023 21:33:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1783' for key 'PRIMARY'' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:92
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(92): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 92
+[07-Sep-2023 23:09:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1783' for key 'PRIMARY'' in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php:98
+Stack trace:
+#0 /home5/smdvtuco/public_html/user/apis/account-number-transfer.php(98): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/user/apis/account-number-transfer.php on line 98
+[08-Sep-2023 16:05:09 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 59
+[08-Sep-2023 16:18:06 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:18:06 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:15 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:15 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:39 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:39 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:59 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:19:59 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:20:03 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:20:03 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:20:52 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:20:52 UTC] PHP Warning:  date() expects parameter 2 to be long, string given in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 60
+[08-Sep-2023 16:49:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_on' cannot be null' in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php:119
+Stack trace:
+#0 /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php(119): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 119
+[08-Sep-2023 16:49:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_on' cannot be null' in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php:119
+Stack trace:
+#0 /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php(119): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 119
+[08-Sep-2023 16:49:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_on' cannot be null' in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php:119
+Stack trace:
+#0 /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php(119): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 119
+[08-Sep-2023 16:50:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'created_on' cannot be null' in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php:119
+Stack trace:
+#0 /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php(119): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home5/smdvtuco/public_html/admin/apis/account-number-transfer.php on line 119
