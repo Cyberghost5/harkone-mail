@@ -97,9 +97,8 @@
                       <tbody>
                         <?php
                         $conn = $pdo->open();
-
                         try{
-                          $stmt = $conn->prepare("SELECT * FROM users WHERE type = 0 ORDER BY id DESC");
+                          $stmt = $conn->prepare("SELECT * FROM users WHERE type = 0 ORDER BY id DESC LIMIT 1000");
                           $stmt->execute();
                           $i = 0;
                           foreach($stmt as $row){
