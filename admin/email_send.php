@@ -137,7 +137,7 @@ require '../vendor/phpmailer/src/SMTP.php';
 								$mail->send();
 
 				        $_SESSION['success'] = 'Test Email successfully sent to '.$email;
-				        echo "<script>window.location.assign('email-settings')</script>";
+				        echo "<script>window.location.assign('omail-settings')</script>";
 
 				    }
 				    catch (Exception $e) {

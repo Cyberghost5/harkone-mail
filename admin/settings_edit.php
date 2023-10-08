@@ -10,15 +10,14 @@
 		$location = $_POST['location'];
 		$copyright = $_POST['copyright'];
 		$admin_email = $_POST['admin_email'];
-		$vtu_mode = 1;
 		$email_vef = $_POST['email_vef'];
 		$color = $_POST['color'];
 
 		$conn = $pdo->open();
 
 		try{
-			$stmt = $conn->prepare("UPDATE settings SET email_vef=:email_vef, vtu_mode=:vtu_mode, site_name=:site_name, site_url=:site_url, site_desc=:site_desc, site_keyword=:site_keyword, location=:location, copyright=:copyright, admin_email=:admin_email, theme=:color WHERE id=:id");
-			$stmt->execute(['email_vef'=>$email_vef, 'vtu_mode'=>$vtu_mode,  'site_name'=>$site_name, 'site_url'=>$site_url, 'site_desc'=>$site_desc, 'site_keyword'=>$site_keyword, 'location'=>$location, 'copyright'=>$copyright, 'admin_email'=>$admin_email, 'color'=>$color, 'id'=>$id]);
+			$stmt = $conn->prepare("UPDATE settings SET email_vef=:email_vef, site_name=:site_name, site_url=:site_url, site_desc=:site_desc, site_keyword=:site_keyword, location=:location, copyright=:copyright, admin_email=:admin_email, theme=:color WHERE id=:id");
+			$stmt->execute(['email_vef'=>$email_vef, 'site_name'=>$site_name, 'site_url'=>$site_url, 'site_desc'=>$site_desc, 'site_keyword'=>$site_keyword, 'location'=>$location, 'copyright'=>$copyright, 'admin_email'=>$admin_email, 'color'=>$color, 'id'=>$id]);
 			$_SESSION['success'] = 'Settings updated successfully';
 
 		}
